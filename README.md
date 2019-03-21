@@ -1,2 +1,2 @@
 # m-n
-nowe repo dla metod numerycznych
+laboratorium: metody numeryczne
