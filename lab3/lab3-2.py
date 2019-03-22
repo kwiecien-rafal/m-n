@@ -38,11 +38,11 @@ def compareFields(figures):
         print('The fields are equal.')
 
 
-figury1 = [['Circle', 4], ['Rhombus', 2, 4]]
-compareFields(figury1)
-figury2 = [['triangle', 4, 2], ['Rhombus', 2, 4]]
-compareFields(figury2)
-figury3 = [['Circle', -5], ['rectangle', 2, 4]]
-compareFields(figury3)
-figury4 = [['RECTANGLE', 4, 4], ['Triangle', 22, 4]]
-compareFields(figury4)
+figures1 = [['Circle', 4], ['Rhombus', 2, 4]]
+compareFields(figures1)
+figures2 = [['triangle', 4, 2], ['Rhombus', 2, 4]]
+compareFields(figures2)
+figures3 = [['Circle', -5], ['rectangle', 2, 4]]
+compareFields(figures3)
+figures4 = [['RECTANGLE', 4, 4], ['Triangle', 22, 4]]
+compareFields(figures4)
