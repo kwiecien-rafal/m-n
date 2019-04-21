@@ -21,28 +21,35 @@ def countField(fig,x,y=1):
 
 def compareFields(figures):
 
-    flds=[]
-    for fig in figures:
-        if len(fig) == 2:
-            flds.append(countField(fig[0],fig[1]))
-        else:
-            flds.append(countField(fig[0],fig[1],fig[2]))
-
-    if flds[0] == 0 or flds[1] == 0:
-        print('The input is invalid.')
-    elif flds[0] > flds [1]:
-        print('The first figure (', figures[0][0], ') has a larger field.')
-    elif flds[0] < flds [1]:
-        print('The second figure (', figures[1][0], ') has a larger field.')
+    flds = []
+    if len(figures)!=2:
+        print("wrong number of parameters")
+    elif len(figures[0]) < 2 or len(figures[0]) > 3 or len(figures[1]) < 2 or len(figures[1]) > 3:
+        print("wrong number of parameters")
     else:
-        print('The fields are equal.')
+        for fig in figures:
+            if len(fig) == 2:
+                flds.append(countField(fig[0],fig[1]))
+            else:
+                flds.append(countField(fig[0],fig[1],fig[2]))
+
+        #elif len(figures[0])=='circle' and len(figures[0]!=2)
+        if flds[0] == 0 or flds[1] == 0:
+            print('value of parameters is invalid.')
+        elif flds[0] > flds [1]:
+            print('The first figure (', figures[0][0], ') has a larger field.')
+        elif flds[0] < flds [1]:
+            print('The second figure (', figures[1][0], ') has a larger field.')
+        else:
+            print('The fields are equal.')
 
 
-figures1 = [['Circle', 4], ['Rhombus', 2, 4]]
-compareFields(figures1)
-figures2 = [['triangle', 4, 2], ['Rhombus', 2, 4]]
+compareFields([['circle', 1]])
+
+
+'''figures2 = [['triangle', 4, 2], ['Rhombus', 2, 4]]
 compareFields(figures2)
 figures3 = [['Circle', -5], ['rectangle', 2, 4]]
 compareFields(figures3)
 figures4 = [['RECTANGLE', 4, 4], ['Triangle', 22, 4]]
-compareFields(figures4)
+compareFields(figures4)'''
